@@ -1,0 +1,34 @@
+{
+  "name": "@binxhealth/pino-stackdriver",
+  "version": "0.0.0",
+  "description": "A utility that makes pino logs StackDriver-compatible",
+  "main": "index.js",
+  "bin": {
+    "pino-stackdriver": "index.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binxhealth/pino-stackdriver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binxhealth/pino-stackdriver/issues"
+  },
+  "homepage": "https://github.com/binxhealth/pino-stackdriver#readme",
+  "dependencies": {
+    "fast-json-parse": "^1.0.3",
+    "fast-json-stringify": "^1.9.2",
+    "pump": "^3.0.0",
+    "split2": "^3.0.0"
+  },
+  "devDependencies": {
+    "execa": "^1.0.0",
+    "jest": "^23.6.0",
+    "np": "^3.0.4"
+  }
+}

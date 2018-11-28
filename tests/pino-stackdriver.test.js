@@ -1,5 +1,5 @@
 const { join } = require('path')
-const spawn = require('child_process').spawn
+const { spawn } = require('child_process')
 
 const pinoStackdriver = join(__dirname, '../')
 const lineOne = JSON.stringify({

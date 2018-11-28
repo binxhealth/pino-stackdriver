@@ -22,7 +22,6 @@ const stringifyJson = fastJson({
 function pinoStackdriver (line) {
   const { value } = parseJson(line)
   if (value) {
-    console.log('level', value.level)
     switch (value.level) {
       case 10: value.severity = 'DEBUG'; break
       case 20: value.severity = 'DEBUG'; break

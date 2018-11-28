@@ -13,9 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/binxhealth/pino-stackdriver.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "pino",
+    "stackdriver",
+    "logentry"
+  ],
+  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
+  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/binxhealth/pino-stackdriver/issues"
   },

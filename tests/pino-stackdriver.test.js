@@ -1,5 +1,7 @@
 const { join } = require('path')
-const { spawn } = require('child_process')
+const { Readable } = require('stream')
+
+const execa = require('execa')
 
 const pinoStackdriver = join(__dirname, '../')
 const lineOne = JSON.stringify({
@@ -11,7 +13,7 @@ const lineOne = JSON.stringify({
   res: { statusCode: 500 },
   responseTime: 116,
   v: 1
-})
+}) + '\n'
 const lineTwo = JSON.stringify({
   hostname: 'host',
   level: 30,
@@ -21,16 +23,22 @@ const lineTwo = JSON.stringify({
   res: { statusCode: 201 },
   responseTime: 288,
   v: 1
-})
+}) + '\n'
 
 test('pino-stackdriver adds severity to log entry', done => {
-  const child = spawn('node', [pinoStackdriver])
-  child.on('error', done.fail)
-  child.stdout.on('data', data => {
-    console.log('data', data.toString())
+  const stdin = new Readable({ read () {} })
+  const cp = execa('node', [pinoStackdriver])
+  let counter = 0
+  cp.stdout.on('data', data => {
+    expect(JSON.parse(data)).toMatchSnapshot()
+    if (counter) {
+      done()
+    } else {
+      counter++
+    }
   })
-  child.stdin.write(lineOne)
-  child.stdin.write(lineTwo)
-  child.kill()
-  done()
+  stdin.pipe(cp.stdin)
+  stdin.push(lineOne)
+  stdin.push(lineTwo)
+  stdin.push(null) // Push null to close the stream.
 })

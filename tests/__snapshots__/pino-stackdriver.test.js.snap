@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pino-stackdriver adds severity to log entry 1`] = `
+Object {
+  "hostname": "host",
+  "level": 50,
+  "msg": "TestError: blah blah blah",
+  "pid": 1,
+  "req": Object {
+    "path": "/test",
+  },
+  "res": Object {
+    "statusCode": 500,
+  },
+  "responseTime": 116,
+  "severity": "ERROR",
+  "v": 1,
+}
+`;
+
+exports[`pino-stackdriver adds severity to log entry 2`] = `
+Object {
+  "hostname": "host",
+  "level": 30,
+  "msg": "A user forgot their password",
+  "pid": 1,
+  "req": Object {
+    "path": "/api/password-reset",
+  },
+  "res": Object {
+    "statusCode": 201,
+  },
+  "responseTime": 288,
+  "severity": "INFO",
+  "v": 1,
+}
+`;

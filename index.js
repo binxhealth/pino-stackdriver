@@ -32,7 +32,7 @@ function pinoStackdriver (line) {
     }
     line = stringifyJson(value)
   }
-  return line
+  return line + '\n'
 }
 
 process.stdin.pipe(split(pinoStackdriver)).pipe(process.stdout)

@@ -1,6 +1,6 @@
 {
   "name": "@binxhealth/pino-stackdriver",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A utility that makes express-pino logs StackDriver-compatible",
   "main": "index.js",
   "bin": {

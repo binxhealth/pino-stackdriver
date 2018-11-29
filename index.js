@@ -30,7 +30,7 @@ function pinoStackdriver (line) {
       case 50: value.severity = 'ERROR'; break
       case 60: value.severity = 'CRITICAL'; break
     }
-    line = stringifyJson(value)
+    line = stringifyJson(value) + '\n'
   }
   return line
 }

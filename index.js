@@ -11,8 +11,8 @@ const stringifyJson = fastJson({
     level: { type: 'integer' },
     msg: { type: 'string' },
     pid: { type: 'integer' },
-    req: { type: 'object' },
-    res: { type: 'object' },
+    req: { type: 'object', additionalProperties: true },
+    res: { type: 'object', additionalProperties: true },
     responseTime: { type: 'integer' },
     v: { type: 'integer' },
     severity: { type: 'string' }

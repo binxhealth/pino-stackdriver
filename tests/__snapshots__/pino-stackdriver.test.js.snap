@@ -14,6 +14,7 @@ Object {
   },
   "responseTime": 116,
   "severity": "ERROR",
+  "time": 1544043395681,
   "v": 1,
 }
 `;
@@ -32,6 +33,7 @@ Object {
   },
   "responseTime": 288,
   "severity": "INFO",
+  "time": 1544043391245,
   "v": 1,
 }
 `;

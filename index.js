@@ -7,6 +7,7 @@ const fastJson = require('fast-json-stringify')
 const stringifyJson = fastJson({
   type: 'object',
   properties: {
+    time: { type: 'integer' },
     hostname: { type: 'string' },
     level: { type: 'integer' },
     msg: { type: 'string' },

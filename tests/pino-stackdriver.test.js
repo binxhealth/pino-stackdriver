@@ -5,6 +5,7 @@ const execa = require('execa')
 
 const pinoStackdriver = join(__dirname, '../')
 const lineOne = JSON.stringify({
+  time: 1544043395681,
   hostname: 'host',
   level: 50,
   msg: 'TestError: blah blah blah',
@@ -15,6 +16,7 @@ const lineOne = JSON.stringify({
   v: 1
 }) + '\n'
 const lineTwo = JSON.stringify({
+  time: 1544043391245,
   hostname: 'host',
   level: 30,
   msg: 'A user forgot their password',

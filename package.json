@@ -32,6 +32,6 @@
   "devDependencies": {
     "execa": "^1.0.0",
     "jest": "^23.6.0",
-    "np": "^3.0.4"
+    "np": "ianwalter/np"
   }
 }

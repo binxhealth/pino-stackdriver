@@ -31,6 +31,7 @@ function pinoStackdriver (line) {
       case 50: value.severity = 'ERROR'; break
       case 60: value.severity = 'CRITICAL'; break
     }
+    value.time = new Date(value.time).toISOString()
     line = stringifyJson(value)
   }
   return line + '\n'

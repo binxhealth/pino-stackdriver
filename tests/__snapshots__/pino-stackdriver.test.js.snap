@@ -14,7 +14,7 @@ Object {
   },
   "responseTime": 116,
   "severity": "ERROR",
-  "time": 1544043395681,
+  "time": "2018-12-05T20:56:35.681Z",
   "v": 1,
 }
 `;
@@ -33,7 +33,7 @@ Object {
   },
   "responseTime": 288,
   "severity": "INFO",
-  "time": 1544043391245,
+  "time": "2018-12-05T20:56:31.245Z",
   "v": 1,
 }
 `;

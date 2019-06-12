@@ -1,6 +1,6 @@
 const { join } = require('path')
 const { Readable } = require('stream')
-
+const { test } = require('@ianwalter/bff')
 const execa = require('execa')
 
 const pinoStackdriver = join(__dirname, '../')
@@ -27,20 +27,22 @@ const lineTwo = JSON.stringify({
   v: 1
 }) + '\n'
 
-test('pino-stackdriver adds severity to log entry', done => {
-  const stdin = new Readable({ read () {} })
-  const cp = execa('node', [pinoStackdriver])
-  let counter = 0
-  cp.stdout.on('data', data => {
-    expect(JSON.parse(data)).toMatchSnapshot()
-    if (counter) {
-      done()
-    } else {
-      counter++
-    }
+test('pino-stackdriver adds severity to log entry', ({ expect }) => {
+  return new Promise(resolve => {
+    const stdin = new Readable({ read () {} })
+    const cp = execa('node', [pinoStackdriver])
+    let counter = 0
+    cp.stdout.on('data', data => {
+      expect(JSON.parse(data)).toMatchSnapshot()
+      if (counter) {
+        resolve()
+      } else {
+        counter++
+      }
+    })
+    stdin.pipe(cp.stdin)
+    stdin.push(lineOne)
+    stdin.push(lineTwo)
+    stdin.push(null) // Push null to close the stream.
   })
-  stdin.pipe(cp.stdin)
-  stdin.push(lineOne)
-  stdin.push(lineTwo)
-  stdin.push(null) // Push null to close the stream.
 })

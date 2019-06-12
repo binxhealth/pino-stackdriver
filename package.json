@@ -7,7 +7,8 @@
     "pino-stackdriver": "index.js"
   },
   "scripts": {
-    "test": "jest"
+    "lint": "eslint .",
+    "test": "bff"
   },
   "repository": {
     "type": "git",
@@ -30,8 +31,15 @@
     "split2": "^3.0.0"
   },
   "devDependencies": {
+    "@ianwalter/bff": "^5.2.1",
+    "@ianwalter/eslint-config": "^2.0.1",
     "execa": "^1.0.0",
-    "jest": "^23.6.0",
     "np": "^5.0.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@ianwalter"
+    ]
   }
 }

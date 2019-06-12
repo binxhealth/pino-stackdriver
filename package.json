@@ -27,8 +27,8 @@
   "homepage": "https://github.com/binxhealth/pino-stackdriver#readme",
   "dependencies": {
     "fast-json-parse": "^1.0.3",
-    "fast-json-stringify": "^1.9.2",
-    "split2": "^3.0.0"
+    "fast-json-stringify": "^1.15.3",
+    "split2": "^3.1.1"
   },
   "devDependencies": {
     "@ianwalter/bff": "^5.2.1",

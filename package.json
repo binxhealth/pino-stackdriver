@@ -25,6 +25,9 @@
     "url": "https://github.com/binxhealth/pino-stackdriver/issues"
   },
   "homepage": "https://github.com/binxhealth/pino-stackdriver#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "fast-json-parse": "^1.0.3",
     "fast-json-stringify": "^1.15.3",
@@ -34,7 +37,7 @@
     "@ianwalter/bff": "^6.1.0",
     "@ianwalter/eslint-config": "^2.0.1",
     "execa": "^2.0.0",
-    "np": "^5.0.3"
+    "np": "ianwalter/np#2fa-external-registry"
   },
   "eslintConfig": {
     "root": true,

@@ -1,10 +1,10 @@
-# pino-stackdriver
+# @binxhealth/pino-stackdriver
 > A utility that makes express-[pino][pinoUrl] logs StackDriver-compatible
 
 ## Installation
 
 ```console
-npm install @binxhealth/pino-stackdriver --save
+yarn add @binxhealth/pino-stackdriver --dev
 ```
 
 ## Usage

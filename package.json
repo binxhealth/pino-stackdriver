@@ -36,8 +36,8 @@
   "devDependencies": {
     "@ianwalter/bff": "^6.1.0",
     "@ianwalter/eslint-config": "^2.0.1",
-    "execa": "^2.0.0",
-    "np": "ianwalter/np#2fa-external-registry"
+    "@ianwalter/release": "^1.0.3",
+    "execa": "^2.0.0"
   },
   "eslintConfig": {
     "root": true,

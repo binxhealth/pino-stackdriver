@@ -107,10 +107,10 @@
     marked "^0.7.0"
     marked-terminal "^3.3.0"
 
-"@ianwalter/release@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/@ianwalter/release/-/release-2.1.0.tgz#9eea57f1dbc8e1dd2d6ed7b75fcfc39db114b7f2"
-  integrity sha512-USuXoPms3vp1VaIv85nx0+Bt/4LJxR0CuY3PGVjGqq0yfNyFTy+vF6rAwVepjR56vkaKsqHnPlLUNuFOSGRXrw==
+"@ianwalter/release@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@ianwalter/release/-/release-3.0.0.tgz#0d314f28ceace7024a7a7bdf52640d02238d9303"
+  integrity sha512-9DXBAGjcQlfDgtwySdP3YqgpL8Kk+fHcPJeiypqbxQVf8myJ1ZV79gmbZgIfDAXnPp2bvLWVFvdefm10wb/DVA==
   dependencies:
     "@ianwalter/cli" "^1.2.0"
     "@ianwalter/commits" "^0.0.5"

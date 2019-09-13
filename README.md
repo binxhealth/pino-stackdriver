@@ -23,5 +23,5 @@ node server.js | pino-stackdriver
 
 
 [pinoUrl]: http://getpino.io/#/
-[buildImage]: https://github.com/binxhealth/pino-stackdriver/workflows/.github/workflows/main.yml/badge.svg
+[buildImage]: https://github.com/binxhealth/pino-stackdriver/workflows/Main/badge.svg
 [buildUrl]: https://github.com/binxhealth/pino-stackdriver/actions

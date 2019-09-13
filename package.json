@@ -25,9 +25,6 @@
     "url": "https://github.com/binxhealth/pino-stackdriver/issues"
   },
   "homepage": "https://github.com/binxhealth/pino-stackdriver#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "dependencies": {
     "fast-json-parse": "^1.0.3",
     "fast-json-stringify": "^1.15.4",
@@ -49,6 +46,11 @@
   "renovate": {
     "extends": [
       "@ianwalter"
+    ]
+  },
+  "release": {
+    "registries": [
+      "github"
     ]
   }
 }

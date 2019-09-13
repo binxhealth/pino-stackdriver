@@ -1,7 +1,7 @@
 # @binxhealth/pino-stackdriver
 > A utility that makes express-[pino][pinoUrl] logs StackDriver-compatible
 
-[![build][buildImage]][buildUrl]
+[![CI][ciImage]][ciUrl]
 
 ## Installation
 
@@ -23,5 +23,5 @@ node server.js | pino-stackdriver
 
 
 [pinoUrl]: http://getpino.io/#/
-[buildImage]: https://github.com/binxhealth/pino-stackdriver/workflows/Main/badge.svg
-[buildUrl]: https://github.com/binxhealth/pino-stackdriver/actions
+[ciImage]: https://github.com/binxhealth/pino-stackdriver/workflows/CI/badge.svg
+[ciUrl]: https://github.com/binxhealth/pino-stackdriver/actions

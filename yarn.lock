@@ -118,17 +118,17 @@
     marked "^0.7.0"
     marked-terminal "^3.3.0"
 
-"@ianwalter/release@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@ianwalter/release/-/release-2.0.0.tgz#64df3bf111ec92cbbd7a607b057e9a7cec551304"
-  integrity sha512-uIgNiohch4mj78yoj4/1g6ARRohq/PGHxH96NEvgwReAEptJ0UCiMg9H6NNoSHy0U2P6eLH3smNNL02m9m13RA==
+"@ianwalter/release@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@ianwalter/release/-/release-2.0.1.tgz#4c27bdb12d8edfb79d225e0b476ec3171cd29b6a"
+  integrity sha512-02fIEXhMIyRQctqq2txoIvj+jjWKISknteyiWGf+2lUZoMCZ227MFDDGPUqsbnrXkJU12niBq33inrnP7e4NkQ==
   dependencies:
     "@ianwalter/cli" "^1.2.0"
     "@ianwalter/commits" "^0.0.5"
     "@ianwalter/print" "^3.2.0"
     "@ianwalter/update-package" "^0.0.2"
     common-tags "^1.8.0"
-    execa "^2.0.3"
+    execa "^2.0.4"
     latest-version "^5.1.0"
     marked "^0.7.0"
     marked-terminal "^3.3.0"

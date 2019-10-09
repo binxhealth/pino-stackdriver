@@ -26,23 +26,31 @@ const lineTwo = JSON.stringify({
   responseTime: 288,
   v: 1
 }) + '\n'
+const lineThree = "{ Error => `Lalala-la lalal-la Elmo's world!` }"
 
 test('pino-stackdriver adds severity to log entry', ({ expect }) => {
   return new Promise(resolve => {
     const stdin = new Readable({ read () {} })
-    const cp = execa('node', [pinoStackdriver])
-    let counter = 0
+    const cp = execa('node', [pinoStackdriver], { reject: false })
+
+    let lines = []
     cp.stdout.on('data', data => {
-      expect(JSON.parse(data)).toMatchSnapshot()
-      if (counter) {
-        resolve()
-      } else {
-        counter++
-      }
+      const rawLines = data.toString().split('\n')
+      lines = lines.concat(rawLines.filter(line => line))
     })
+    cp.stdout.on('close', () => {
+      expect(lines).toMatchSnapshot()
+      resolve()
+    })
+
+    // Write logs to stream.
     stdin.pipe(cp.stdin)
     stdin.push(lineOne)
     stdin.push(lineTwo)
-    stdin.push(null) // Push null to close the stream.
+    stdin.push(lineThree)
+
+    // Push null to close the streams.
+    stdin.push(null)
+    cp.stdin.push(null)
   })
 })

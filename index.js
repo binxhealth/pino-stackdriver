@@ -26,13 +26,19 @@ function pinoStackdriver (line) {
     switch (value.level) {
       case 10: value.severity = 'DEBUG'; break
       case 20: value.severity = 'DEBUG'; break
-      case 30: value.severity = 'INFO'; break
       case 40: value.severity = 'WARNING'; break
       case 50: value.severity = 'ERROR'; break
       case 60: value.severity = 'CRITICAL'; break
+      default: value.severity = 'INFO'
     }
-    value.time = new Date(value.time).toISOString()
-    line = stringifyJson(value)
+    if (value.time) {
+      value.time = new Date(value.time).toISOString()
+    }
+    if (value.level) {
+      line = stringifyJson(value)
+    } else {
+      line = JSON.stringify(value)
+    }
   }
   return line + '\n'
 }

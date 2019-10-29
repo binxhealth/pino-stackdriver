@@ -34,11 +34,7 @@ function pinoStackdriver (line) {
     if (value.time) {
       value.time = new Date(value.time).toISOString()
     }
-    if (value.level) {
-      line = stringifyJson(value)
-    } else {
-      line = JSON.stringify(value)
-    }
+    line = value.req ? stringifyJson(value) : JSON.stringify(value)
   }
   return line + '\n'
 }

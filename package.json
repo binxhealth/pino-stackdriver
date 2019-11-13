@@ -4,7 +4,7 @@
   "description": "A utility that makes express-pino logs StackDriver-compatible",
   "main": "index.js",
   "bin": {
-    "pino-stackdriver": "bin.js"
+    "pino-stackdriver": "cli.js"
   },
   "scripts": {
     "lint": "eslint .",

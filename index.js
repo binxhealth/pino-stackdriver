@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const split = require('split2')
 const parseJson = require('fast-json-parse')
 const fastJson = require('fast-json-stringify')

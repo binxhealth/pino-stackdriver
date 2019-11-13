@@ -21,15 +21,15 @@ Or with a global install:
 node server.js | pino-stackdriver
 ```
 
-Or pass the stream to [pino][pinoUrl]
+Or create a new stream and pass it to [pino][pinoUrl]
 ```javascript
-import { stream } from '@binxhealth/pino-stackdriver';
+import { createStream } from '@binxhealth/pino-stackdriver';
 
 const logger = pino(
   {
     level: 'debug',
   },
-  stream
+  createStream()
 );
 
 logger.info('This works the same as usual...');

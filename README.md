@@ -21,6 +21,21 @@ Or with a global install:
 node server.js | pino-stackdriver
 ```
 
+Or create a new stream and pass it to [pino][pinoUrl]
+```javascript
+import { createStream } from '@binxhealth/pino-stackdriver';
+
+const logger = pino(
+  {
+    level: 'debug',
+  },
+  createStream()
+);
+
+logger.info('This works the same as usual...');
+logger.error('...and will log to stdout with the correct Stackdriver format');
+```
+
 
 [pinoUrl]: http://getpino.io/#/
 [ciImage]: https://github.com/binxhealth/pino-stackdriver/workflows/CI/badge.svg

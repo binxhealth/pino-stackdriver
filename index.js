@@ -3,6 +3,7 @@
 const split = require('split2')
 const parseJson = require('fast-json-parse')
 const fastJson = require('fast-json-stringify')
+const pumpify = require('pumpify')
 
 const stringifyJson = fastJson({
   type: 'object',
@@ -39,4 +40,7 @@ function pinoStackdriver (line) {
   return line + '\n'
 }
 
-process.stdin.pipe(split(pinoStackdriver)).pipe(process.stdout)
+const transform = split(pinoStackdriver)
+
+module.exports.transform = transform
+module.exports.stream = pumpify(transform, process.stdout)

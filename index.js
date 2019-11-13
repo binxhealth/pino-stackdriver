@@ -40,8 +40,12 @@ function pinoStackdriver (line) {
 
 const transform = split(pinoStackdriver)
 
-function createStream () {
-  return pumpify(transform, process.stdout)
+function createStream (dest) {
+  if (dest === undefined) {
+    dest = process.stdout
+  }
+
+  return pumpify(transform, dest)
 }
 
 module.exports.transform = transform

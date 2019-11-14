@@ -40,11 +40,7 @@ function pinoStackdriver (line) {
 
 const transform = split(pinoStackdriver)
 
-function createStream (dest) {
-  if (dest === undefined) {
-    dest = process.stdout
-  }
-
+function createStream (dest = process.stdout) {
   return pumpify(transform, dest)
 }
 

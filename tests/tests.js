@@ -4,7 +4,7 @@ const { Readable, Writable } = require('stream')
 const { test } = require('@ianwalter/bff')
 const execa = require('execa')
 const pino = require('pino')
-const createStream = require('../index').createStream
+const { createStream } = require('../index')
 
 const pinoStackdriver = join(__dirname, '../cli')
 const lineOne = JSON.stringify({
@@ -63,7 +63,7 @@ test('pino-stackdriver adds severity to log entry via createStream',
     return new Promise(resolve => {
       const pid = process.pid
       const hostname = os.hostname()
-      const originaDateNow = Date.now
+      const originalDateNow = Date.now
       Date.now = () => 1544043395681
 
       let lines = []
@@ -79,7 +79,7 @@ test('pino-stackdriver adds severity to log entry via createStream',
       })
 
       stdout.on('close', () => {
-        Date.now = originaDateNow
+        Date.now = originalDateNow
         expect(lines).toEqual(
           [
             {

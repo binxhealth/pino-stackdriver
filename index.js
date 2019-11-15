@@ -1,23 +1,6 @@
 const split = require('split2')
 const parseJson = require('fast-json-parse')
-const fastJson = require('fast-json-stringify')
 const pumpify = require('pumpify')
-
-const stringifyJson = fastJson({
-  type: 'object',
-  properties: {
-    time: { type: 'string' },
-    hostname: { type: 'string' },
-    level: { type: 'integer' },
-    msg: { type: 'string' },
-    pid: { type: 'integer' },
-    req: { type: 'object', additionalProperties: true },
-    res: { type: 'object', additionalProperties: true },
-    responseTime: { type: 'integer' },
-    v: { type: 'integer' },
-    severity: { type: 'string' }
-  }
-})
 
 function pinoStackdriver (line) {
   const { value } = parseJson(line)
@@ -33,7 +16,7 @@ function pinoStackdriver (line) {
     if (value.time) {
       value.time = new Date(value.time).toISOString()
     }
-    line = value.req ? stringifyJson(value) : JSON.stringify(value)
+    line = JSON.stringify(value)
   }
   return line + '\n'
 }

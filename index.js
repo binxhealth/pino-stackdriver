@@ -44,5 +44,4 @@ function createStream () {
   return pumpify(transform, process.stdout)
 }
 
-module.exports.transform = transform
-module.exports.createStream = createStream
+module.exports = { transform, createStream }

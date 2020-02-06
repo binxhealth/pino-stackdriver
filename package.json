@@ -35,7 +35,7 @@
     "@ianwalter/eslint-config": "^4.0.0",
     "@ianwalter/release": "^5.0.0",
     "@ianwalter/renovate-config": "^1.2.0",
-    "execa": "^3.3.0",
+    "execa": "^4.0.0",
     "pino": "^5.16.0"
   },
   "eslintConfig": {

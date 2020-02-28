@@ -177,18 +177,19 @@
   resolved "https://registry.npmjs.org/@ianwalter/base-error/-/base-error-6.1.0.tgz#a25f8a57e04877f6823251c5f1e05c7c060a0130"
   integrity sha512-a1oe3gdY7aVJotysd2hbkARZdIXd80b1xL+kcJGQ/5VzEv7bMhQ+vlamv8DLz828uz/dxMCVb4++n75RyVUs2Q==
 
-"@ianwalter/bff@^9.2.0":
-  version "9.2.0"
-  resolved "https://registry.npmjs.org/@ianwalter/bff/-/bff-9.2.0.tgz#8813aba86f7df0cd0c2b44452edc2b2639a5dda9"
-  integrity sha512-oh5gqBdooSBy2q0JS8Icj8Eq3j0O7BusJFwKl/t168chCtyiwqLP27DU6kUeE4/FiRVB9b+3HKWblqAes9OJJg==
+"@ianwalter/bff@^9.6.0":
+  version "9.6.0"
+  resolved "https://registry.npmjs.org/@ianwalter/bff/-/bff-9.6.0.tgz#6c844223ddcae96b9bf373a3665f2455e1fe38da"
+  integrity sha512-eKmZKM1dJ8cbZaUbgN0ASi8HDcQkZhU1R0oSvVTuv+rPgR7a+3P6x2X/+WrZiJ0XU0gXGmC9B9kmXe80R9u9nw==
   dependencies:
     "@ianwalter/cli" "^4.1.0"
-    "@ianwalter/clone" "^4.1.0"
+    "@ianwalter/clone" "^5.0.0"
     "@ianwalter/cloneable" "^1.0.1"
-    "@ianwalter/print" "^5.0.0"
+    "@ianwalter/print" "^5.3.0"
     "@ianwalter/subpub" "^2.0.0"
     "@ianwalter/timer" "^1.1.0"
     callsites "^3.1.0"
+    camaro "^4.1.2"
     common-tags "^1.8.0"
     expect "^25.1.0"
     globby "^11.0.0"
@@ -248,6 +249,11 @@
   resolved "https://registry.npmjs.org/@ianwalter/clone/-/clone-4.1.0.tgz#635860922699338da607b8e990ae5173e3e3e9c9"
   integrity sha512-UWlp3DtPvLgZkS3hy6ihHQATjQC1BtoJxk4PCO/v7r8m7P4g0WkdacadpUh0ze3yNqO+uFIRW2RX1boGz7feQQ==
 
+"@ianwalter/clone@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/@ianwalter/clone/-/clone-5.0.0.tgz#d5e20f3b9eccfbbb094f6f38e1cf6d31818b51ac"
+  integrity sha512-N0BlOwYog4ASu2OP+9q2xM3fvJDtFm4YhhZG2dmn0rmueJGhqC/OSJIHgixL6wORDP0w9+sRJdI97b0IoWBdYw==
+
 "@ianwalter/cloneable@^1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@ianwalter/cloneable/-/cloneable-1.0.1.tgz#627489e86020f035559b263762e1ff6329b8c08e"
@@ -291,6 +297,11 @@
   resolved "https://registry.npmjs.org/@ianwalter/merge/-/merge-5.0.0.tgz#972b3cd668ab87416fba1af99186cd83d34d687f"
   integrity sha512-Z+Xn8dT0ApkjGizdwMQaCgsAyHO+zKhCC2OYO7lEYLs1IdCzXtRUYah3vkIWT8/Ad94ni0rxtR39VTRWJE1/Qw==
 
+"@ianwalter/merge@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/@ianwalter/merge/-/merge-6.0.0.tgz#7d7facccc86fb407571c78de00a0bd2adca395cb"
+  integrity sha512-Ohskh/vqQFgW2Abaxd3kPYz/uNqoUmCSjU8kB8SoRieQqIOyXit1pFKYW4HmcoRcDFbktpWmS1QpIBoF74DGBg==
+
 "@ianwalter/print@^3.9.0":
   version "3.9.0"
   resolved "https://registry.npmjs.org/@ianwalter/print/-/print-3.9.0.tgz#db84d5f0fdcd144b1647aded8d33e6fa615208b9"
@@ -331,6 +342,22 @@
     "@ianwalter/clone" "^4.1.0"
     "@ianwalter/log" "^4.0.0"
     "@ianwalter/merge" "^5.0.0"
+    chalk "^3.0.0"
+    has-ansi "^4.0.0"
+    has-emoji "^1.1.0"
+    marked "^0.8.0"
+    marked-terminal "^4.0.0"
+    strip-ansi "^6.0.0"
+
+"@ianwalter/print@^5.3.0":
+  version "5.3.0"
+  resolved "https://registry.npmjs.org/@ianwalter/print/-/print-5.3.0.tgz#f5a73bbe387075d0ac5fb654943c81c181082d84"
+  integrity sha512-YkkUv/Bnwzu0qNqj3BCo1ZP19wk2kkYXYhFvgKGZqVpELRHEwOzo5pD4KszwhjvMUNiBOLYqOZO8C3OCx5+cXA==
+  dependencies:
+    "@ianwalter/chromafi" "^1.0.1"
+    "@ianwalter/clone" "^5.0.0"
+    "@ianwalter/log" "^4.0.0"
+    "@ianwalter/merge" "^6.0.0"
     chalk "^3.0.0"
     has-ansi "^4.0.0"
     has-emoji "^1.1.0"
@@ -822,6 +849,11 @@ callsites@^3.0.0, callsites@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
+
+camaro@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.npmjs.org/camaro/-/camaro-4.1.2.tgz#69a8d89f7fb524f9ee79cfb137e27645b26072eb"
+  integrity sha512-pogQ/I2Ijr4Z+hNoCjgBzw9S/6PZkqDNK9UMAcietgUHVZ4Lw2bq8SkfHonqIYW+bDjk6VBNm+XkURrf6iaLAQ==
 
 camelcase@^4.1.0:
   version "4.1.0"

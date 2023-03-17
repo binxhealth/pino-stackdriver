@@ -382,10 +382,10 @@
     prompts "^2.3.0"
     semver "^7.1.1"
 
-"@ianwalter/renovate-config@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npmjs.org/@ianwalter/renovate-config/-/renovate-config-1.3.0.tgz#821419333c7673dae837b7bbfb5574a520a4e9db"
-  integrity sha512-J6xH9Lnm9TxqtZIO/cWFT1ziykPN3HlcMeJmUyiOHB0ol4DYJJPM/6/LSbEydU7iUGK5DxobWLAHoKC4j7RcLg==
+"@ianwalter/renovate-config@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.npmjs.org/@ianwalter/renovate-config/-/renovate-config-1.5.0.tgz#19529517c87296622d72b16008043358b957c038"
+  integrity sha512-XVALXzdi4LT9nJE/m7KjjHrygc5wYjijkh3jZj8XMvhckcum0GqVfXk33mZ1ofEWBuGC8DhWM0imL8pC1R3MiA==
 
 "@ianwalter/subpub@^2.0.0":
   version "2.0.0"
